@@ -8,16 +8,21 @@
           <v-form class="text-xs-left mb-5">
             <ul>
               <transition-group name="list" tag="li">
-              <li v-for="(task, i) in tasks" :key="i" class="list-item">
+              <li 
+                v-for="(task, i) in tasks" 
+                :key="i" 
+                v-if="false">
                 <h2 class="cyan--text mt-3">Task {{ task.taskNumber }}</h2>
                 <i class="fas fa-minus-circle" @click="deleteTask(i)"></i>
-                <v-textarea
+                <!-- <v-textarea
                 light
                 box
                 color="cyan"
                 name=""
                 placeholder="Enter your task here..."
-              ></v-textarea>
+              ></v-textarea> -->
+              
+              <textarea></textarea>
               </li>
               </transition-group>
             </ul>
@@ -53,16 +58,15 @@ export default {
         {taskNumber: 4},
         {taskNumber: 5}
       ],
-      alert: false
+      alert: false,
+      taskCounter: 0,
+      taskShow: false
     }
   },
   methods: {
-    addTask() {
-      if(this.tasks.length < 5){
-        const taskItem = document.createElement('li');
-        // let newTaskItem = taskItem.cloneNode(true);
-        this.tasks.push(taskItem);
-        console.log(this.tasks);
+    addTask(i) {
+      if(this.tasks.length < 5 || this.taskCounter === 0) {
+        this.taskShow = true;
       } else {
         this.alert = true;
         setTimeout(() => {
