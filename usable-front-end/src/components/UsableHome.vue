@@ -72,6 +72,7 @@ export default {
            
             if (data.type === "opaque") {
               vm.urlCheck = false;
+              document.querySelector('.continueBtn').style.visibility = 'visible';
               urlInputBox.style.borderColor = "green";
               document.querySelector(".fa-check").style.opacity = "1";
               document.querySelector(".fa-check").style.right = "40px";
@@ -84,6 +85,7 @@ export default {
         .catch(function(error) {
           vm.urlCheck = true;
           urlInputBox.style.borderColor = "red";
+          document.querySelector('.continueBtn').style.visibility = 'hidden';
           document.querySelector(".fa-check").style.opacity = "0";
           document.querySelector(".fa-check").style.right = "0px";
           document.querySelector(".fa-chevron-right").style.right = "0px";
@@ -122,6 +124,10 @@ input {
 
 .fa-chevron-right {
   transition: right 0.5s;
+}
+
+.continueBtn {
+  visibility: hidden;
 }
 
 .fa-check {
