@@ -24,7 +24,7 @@
             <hr>
           <ul>
             <transition-group name="list" tag="div">
-              <li v-for="(task, i) in tasks" :key="i" class="list-item">
+              <li v-for="(task, i) in tasks" :key="task" class="list-item">
                 <h2 class="cyan--text mt-3">Task {{ i + 1 }}</h2>
                 <i class="fas fa-minus-circle" @click="deleteTask(i)"></i>
                 <v-textarea
