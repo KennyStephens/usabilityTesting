@@ -67,7 +67,6 @@ export default {
             }
       fetch(this.urlInput, { mode: "no-cors" })
         .then(function(data) {
-          console.log(data);
           setTimeout(() => {
            
             if (data.type === "opaque") {
@@ -82,7 +81,7 @@ export default {
             }
           }, 1500);
         })
-        .catch(function(error) {
+        .catch(function() {
           vm.urlCheck = true;
           urlInputBox.style.borderColor = "red";
           document.querySelector('.continueBtn').style.visibility = 'hidden';

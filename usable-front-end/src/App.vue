@@ -17,19 +17,13 @@
 </template>
 
 <script>
-import UsableHome from "./components/UsableHome";
 import UsableNavbar from "./components/UsableNavbar";
-import UsableFooter from "./components/UsableFooter";
-import UsableForm from "./components/UsableForm";
-import UsableSignUp from "./components/UsableSignUp"
+
 
 export default {
   name: "App",
   components: {
-    UsableHome,
-    UsableNavbar,
-    UsableFooter,
-    UsableForm
+    UsableNavbar
   }
 };
 </script>
