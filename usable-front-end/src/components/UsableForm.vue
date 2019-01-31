@@ -58,12 +58,13 @@
             class="d-block mt-3 ma-auto pl-5 pr-5"
             round
             color="cyan"
+            type="submit"
             @click="submitForm"
           >SUBMIT TASKS</v-btn>
         </v-form>
       </v-flex>
       <!-- URL Modal -->
-      <div class="text-xs-center">
+      <!-- <div class="text-xs-center">
         <v-dialog v-model="dialog" width="500">
           <v-card>
             <v-card-title
@@ -82,7 +83,7 @@
 
             <v-text-field @click="copyURL" value="www.kennystephens.com" class="ma-3" color="cyan"></v-text-field>
             <p v-if="copied" class="text-xs-center title pb-4">COPIED!</p>
-            <v-divider></v-divider>
+            <v-divider></v-divider> -->
 
             <!-- <v-card-actions>
           <v-spacer></v-spacer>
@@ -127,22 +128,22 @@ export default {
         }, 3000);
       }
     },
-    submitForm() {
-      this.iconShow = true;
-      this.copied = false;
-      document.querySelector("#usable-home").style.filter = "brightness(50%)";
-      setTimeout(() => {
-        this.iconShow = false;
-        document.querySelector("#usable-home").style.filter =
-          "brightness(100%)";
-        this.dialog = true;
-      }, 3000);
-      let getTasks = document.querySelectorAll("textarea");
+    // submitForm() {
+    //   this.iconShow = true;
+    //   this.copied = false;
+    //   document.querySelector("#usable-home").style.filter = "brightness(50%)";
+    //   setTimeout(() => {
+    //     this.iconShow = false;
+    //     document.querySelector("#usable-home").style.filter =
+    //       "brightness(100%)";
+    //     this.dialog = true;
+    //   }, 3000);
+    //   let getTasks = document.querySelectorAll("textarea");
 
-      getTasks.forEach(task => {
-        return this.taskResults.push(task.value);
-      });
-    },
+    //   getTasks.forEach(task => {
+    //     return this.taskResults.push(task.value);
+    //   });
+    // },
     deleteTask(e) {
       // console.log(this.tasks[i]);
       this.tasks.splice(e.target, 1);
