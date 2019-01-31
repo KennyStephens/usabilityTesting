@@ -95,9 +95,9 @@
             Got it!
           </v-btn>
             </v-card-actions>-->
-          </v-card>
+          <!-- </v-card>
         </v-dialog>
-      </div>
+      </div> -->
     </v-layout>
   </v-container>
 </template>
