@@ -8,7 +8,7 @@
       <router-view></router-view>
       </transition>
       <!-- Footer -->
-      <usable-footer />
+      <!-- <usable-footer /> -->
      
     </v-container>
   </v-app>

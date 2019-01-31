@@ -52,6 +52,7 @@ export default {
       document.querySelector(".navbar").style.backgroundImage =
         "url(/img/background.27769967.png)";
       document.querySelector(".navbar").style.backgroundSize = "cover";
+      // this.$store.state.urlInput = this.urlInput;
     }
   },
   watch: {
@@ -88,6 +89,7 @@ export default {
           document.querySelector(".fa-check").style.opacity = "0";
           document.querySelector(".fa-check").style.right = "0px";
           document.querySelector(".fa-chevron-right").style.right = "0px";
+          this.$store.state.urlInput = this.urlInput;
         });
     }
   }

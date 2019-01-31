@@ -22,9 +22,10 @@
             box
             required></v-text-field>
             <hr>
+            <input type="hidden" name="webURL" value="http://riderjensen.com">
           <ul>
             <transition-group name="list" tag="div">
-              <li v-for="(task, i) in tasks" :key="task" class="list-item">
+              <li v-for="(task, i) in tasks" :key="task.taskNumber" class="list-item">
                 <h2 class="cyan--text mt-3">Task {{ i + 1 }}</h2>
                 <i class="fas fa-minus-circle" @click="deleteTask(i)"></i>
                 <v-textarea
@@ -59,7 +60,6 @@
             round
             color="cyan"
             type="submit"
-            @click="submitForm"
           >SUBMIT TASKS</v-btn>
         </v-form>
       </v-flex>
